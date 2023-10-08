@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_app/components/top_bar.dart';
+import 'package:netflix_app/model/model_movie.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -9,6 +10,15 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
+  List<Movie> movies = [
+    Movie.fromMap({
+      'title': '사랑의 불시착',
+      'keyword': '사랑/로맨스/판타지',
+      'poster': 'test_movie_1.png',
+      'like': false
+    })
+  ];
+
   @override
   void initState() {
     super.initState();
