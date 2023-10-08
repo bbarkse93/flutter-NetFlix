@@ -17,7 +17,25 @@ class _HomeTabState extends State<HomeTab> {
       'keyword': '사랑/로맨스/판타지',
       'poster': 'assets/test_movie_1.png',
       'like': false
-    })
+    }),
+    Movie.fromMap({
+      'title': '미스터 션샤인',
+      'keyword': '의병/미군/로맨스',
+      'poster': 'assets/test_movie_2.png',
+      'like': false
+    }),
+    Movie.fromMap({
+      'title': '태양의 후예',
+      'keyword': '군인/의사/사랑',
+      'poster': 'assets/test_movie_3.png',
+      'like': false
+    }),
+    Movie.fromMap({
+      'title': '스물다섯 스물하나',
+      'keyword': '펜싱/기자/사랑',
+      'poster': 'assets/test_movie_4.png',
+      'like': false
+    }),
   ];
 
   @override
