@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_app/components/carousel_image.dart';
 import 'package:netflix_app/components/top_bar.dart';
 import 'package:netflix_app/model/model_movie.dart';
 
@@ -14,7 +15,7 @@ class _HomeTabState extends State<HomeTab> {
     Movie.fromMap({
       'title': '사랑의 불시착',
       'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
+      'poster': 'assets/test_movie_1.png',
       'like': false
     })
   ];
@@ -26,6 +27,11 @@ class _HomeTabState extends State<HomeTab> {
 
   @override
   Widget build(BuildContext context) {
-    return TopBar();
+    return ListView(children: <Widget>[
+      Stack(children: <Widget>[
+        CarouselImage(movies: movies),
+        TopBar(),
+      ]),
+    ]);
   }
 }
