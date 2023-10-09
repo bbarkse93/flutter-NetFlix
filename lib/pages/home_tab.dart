@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_app/components/box_slider.dart';
 import 'package:netflix_app/components/carousel_image.dart';
 import 'package:netflix_app/components/circle_slider.dart';
 import 'package:netflix_app/components/top_bar.dart';
@@ -58,6 +59,10 @@ class _HomeTabState extends State<HomeTab> {
           padding: EdgeInsets.all(7),
           child: CircleSlider(movies: movies),
         ),
+        Container(
+          padding: EdgeInsets.all(7),
+          child: BoxSlider(movies: movies),
+        )
       ],
     );
   }
