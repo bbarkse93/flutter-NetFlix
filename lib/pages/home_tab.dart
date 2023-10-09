@@ -38,6 +38,12 @@ class _HomeTabState extends State<HomeTab> {
       'poster': 'assets/test_movie_4.png',
       'like': false
     }),
+    Movie.fromMap({
+      'title': '도깨비',
+      'keyword': '로맨스/판타지/고려',
+      'poster': 'assets/test_movie_5.png',
+      'like': false
+    }),
   ];
 
   @override

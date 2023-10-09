@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       title: "NetFlex",
       theme: theme(),
       home: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
