@@ -13,6 +13,7 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
+  // 더미데이터
   List<Movie> movies = [
     Movie.fromMap({
       'title': '사랑의 불시착',

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:netflix_app/components/work_bar.dart';
 import 'package:netflix_app/model/model_movie.dart';
 
 class DetailTab extends StatefulWidget {
@@ -114,65 +115,12 @@ class _DetailTabState extends State<DetailTab> {
             Container(
               color: Colors.black26,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: <Widget>[
-                          like ? Icon(Icons.check) : Icon(Icons.add),
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Text(
-                              "내가 찜한 콘텐츠",
-                              style: TextStyle(
-                                  fontSize: 11, color: Colors.white60),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: <Widget>[
-                          Icon(Icons.thumb_up),
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Text(
-                              "평가",
-                              style: TextStyle(
-                                  fontSize: 11, color: Colors.white60),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        children: <Widget>[
-                          Icon(Icons.share),
-                          Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: Text(
-                              "공유",
-                              style: TextStyle(
-                                  fontSize: 11, color: Colors.white60),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  )
+                  WorkBar(Icons.add, "찜하기"),
+                  WorkBar(Icons.thumb_up, "평가"),
+                  WorkBar(Icons.download, "공유"),
+                  WorkBar(Icons.download, "저장"),
                 ],
               ),
             )
